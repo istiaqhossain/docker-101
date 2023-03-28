@@ -1,0 +1,1 @@
+<?php echo "<h1>Docker Compose Nginx PHP</h1>";
