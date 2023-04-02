@@ -12,7 +12,10 @@ services:
       - php-fpm
 
   php-fpm:
-    build: ./.docker/php-fpm
+    build: 
+      context: ./.docker/php-fpm
+      args:
+        - PHP_VERSION=${PHP_VERSION}
     volumes:
       - ./.docker/php-fpm/php.ini:/usr/local/etc/php/conf.d/php.ini
       - ./src:/var/www/html

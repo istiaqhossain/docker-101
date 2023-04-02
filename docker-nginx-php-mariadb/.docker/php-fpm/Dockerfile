@@ -1,4 +1,6 @@
-FROM php:8.2.4-fpm
+ARG PHP_VERSION
+
+FROM php:${PHP_VERSION}-fpm
 
 ## Install dependencies
 RUN apt-get clean \
